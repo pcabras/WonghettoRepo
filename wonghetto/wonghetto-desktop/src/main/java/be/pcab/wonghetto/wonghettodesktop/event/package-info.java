@@ -1,0 +1,5 @@
+/**
+ * @author Paolo Cabras
+ *
+ */
+package be.pcab.wonghetto.wonghettodesktop.event;
