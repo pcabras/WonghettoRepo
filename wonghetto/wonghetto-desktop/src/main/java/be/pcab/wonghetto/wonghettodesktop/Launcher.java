@@ -19,6 +19,8 @@ public class Launcher {
 		Wonghetto wonghetto = ApplicationBuilder.builder()
 				.type(ApplicationType.DESKTOP).build();
 		
+		wonghetto.switchOn();
+		
 		context.setWonghetto(wonghetto);
 		
 		Application.launch(MainUI.class, args);

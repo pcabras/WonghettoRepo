@@ -20,6 +20,11 @@ public abstract class Wonghetto {
 	public ApplicationType getApplicationType() {
 		return applicationType;
 	}
+	
+	protected void setApplicationType(ApplicationType type){
+		
+		this.applicationType = type;
+	}
 
 	protected void init() {
 		// TODO Auto-generated method stub

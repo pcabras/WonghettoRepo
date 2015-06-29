@@ -1,10 +1,17 @@
 package be.pcab.wonghetto.wonghettocore;
 
+import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
+
 public class WonghettoDesktop extends Wonghetto{
 
 	@Override
 	protected void init() {
-		// TODO Auto-generated method stub
+		
+		WonghettoCloud cloud = new WonghettoCloud();
+		WonghettoContext context = WonghettoContext.getInstance();
+		
+		context.setCloud(cloud);
+		
 		super.init();
 	}
 

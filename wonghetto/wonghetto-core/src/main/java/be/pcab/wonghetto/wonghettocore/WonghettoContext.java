@@ -1,11 +1,15 @@
 package be.pcab.wonghetto.wonghettocore;
 
+import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
+
 
 public class WonghettoContext {
 
 	private static WonghettoContext instance;
 	
 	private Wonghetto wonghetto;
+	
+	private WonghettoCloud cloud;
 	
 	private WonghettoContext() {
 		
@@ -27,6 +31,14 @@ public class WonghettoContext {
 
 	public void setWonghetto(Wonghetto wonghetto) {
 		this.wonghetto = wonghetto;
+	}
+
+	public WonghettoCloud getCloud() {
+		return cloud;
+	}
+
+	public void setCloud(WonghettoCloud cloud) {
+		this.cloud = cloud;
 	}
 	
 	

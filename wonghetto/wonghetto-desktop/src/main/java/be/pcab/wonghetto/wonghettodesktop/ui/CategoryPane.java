@@ -46,7 +46,7 @@ public class CategoryPane extends TitledPane {
 		addButton.setOnAction(EventHolder.getAddCategoryElementHandler());
 
 		Button removeButton = new Button("remove");
-		removeButton.setOnAction(EventHolder.getRemoveCategoryElement());
+		removeButton.setOnAction(EventHolder.getRemoveCategoryElementHandler());
 
 		FlowPane flowPane = new FlowPane(Orientation.HORIZONTAL);
 		flowPane.getChildren().add(addButton);

@@ -24,10 +24,14 @@ public class ApplicationBuilder {
 		if(applicationType == ApplicationType.DESKTOP){
 			
 			wonghetto = new WonghettoDesktop();
+			wonghetto.setApplicationType(applicationType);
+			
 		}
 		else{
 			
 			wonghetto = new WonghettoApp();
+			wonghetto.setApplicationType(applicationType);
+		
 		}
 		
 		return wonghetto;

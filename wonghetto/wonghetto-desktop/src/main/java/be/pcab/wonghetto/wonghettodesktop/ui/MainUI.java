@@ -77,7 +77,7 @@ public class MainUI extends Application {
 		newCategoryElementItem.setOnAction(EventHolder.getAddCategoryElementHandler());
 		
 		MenuItem removeCategoryElementItem = new MenuItem("remove Node");
-		removeCategoryElementItem.setOnAction(EventHolder.getRemoveCategoryElement());
+		removeCategoryElementItem.setOnAction(EventHolder.getRemoveCategoryElementHandler());
 		
 		Menu editMenu = new Menu("Edit");
 		editMenu.getItems().add(newCategoryItem);
@@ -109,10 +109,12 @@ public class MainUI extends Application {
 		newButton.setOnAction(EventHolder.getAddCategoryHandler());
 
 		ToggleButton startButton = new ToggleButton("start");
+		startButton.setOnAction(EventHolder.getStartServerHandler());
 
 		ToggleButton syncButton = new ToggleButton("sync");
 
 		ToggleButton stopButton = new ToggleButton("stop");
+		stopButton.setOnAction(EventHolder.getStopServerHandler());
 
 		Separator separator = new Separator();
 
