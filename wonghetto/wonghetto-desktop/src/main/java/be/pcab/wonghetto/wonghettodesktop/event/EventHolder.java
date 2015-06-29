@@ -90,6 +90,7 @@ public class EventHolder {
 			WonghettoCloud cloud = WonghettoContext.getInstance().getCloud();
 			cloud.getIn();
 			componentManager.getStatusBar().setStatusText("Wonghetto Cloud is now available");
+			
 		}
 	};
 
