@@ -6,11 +6,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextInputDialog;
 import javafx.stage.FileChooser;
-import be.pcab.wonghetto.wonghettocore.WonghettoContext;
-import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 import be.pcab.wonghetto.wonghettocore.model.CategoryElementModel;
 import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
 import be.pcab.wonghetto.wonghettodesktop.bind.UIComponentsManager;
+import be.pcab.wonghetto.wonghettodesktop.tasks.CloudInitService;
+import be.pcab.wonghetto.wonghettodesktop.tasks.CloudReleaseService;
 import be.pcab.wonghetto.wonghettodesktop.ui.CategoryPane;
 
 public class EventHolder {
@@ -86,10 +86,9 @@ public class EventHolder {
 
 		@Override
 		public void handle(ActionEvent event) {
-
-			WonghettoCloud cloud = WonghettoContext.getInstance().getCloud();
-			cloud.getIn();
-			componentManager.getStatusBar().setStatusText("Wonghetto Cloud is now available");
+	
+			CloudInitService initService = new CloudInitService();
+			initService.start();
 			
 		}
 	};
@@ -99,10 +98,8 @@ public class EventHolder {
 		@Override
 		public void handle(ActionEvent event) {
 			
-			WonghettoCloud cloud = WonghettoContext.getInstance().getCloud();
-			cloud.getOut();
-			
-			componentManager.getStatusBar().setStatusText("You gracefully get out Wonghetto cloud");
+			CloudReleaseService releaseService = new CloudReleaseService();
+			releaseService.start();
 		}
 	};
 
