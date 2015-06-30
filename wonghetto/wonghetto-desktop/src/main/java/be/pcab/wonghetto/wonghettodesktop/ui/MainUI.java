@@ -58,10 +58,13 @@ public class MainUI extends Application {
 		// MENU SERVER
 
 		MenuItem startItem = new MenuItem("Start Server");
+		startItem.setOnAction(EventHolder.getStartServerHandler());
 
-		MenuItem syncItem = new MenuItem("Syncronize");
+		MenuItem syncItem = new MenuItem("Synchronize");
+		syncItem.setOnAction(EventHolder.getSynchronizeServerHandler());
 
 		MenuItem stopItem = new MenuItem("Stop Server");
+		stopItem.setOnAction(EventHolder.getStopServerHandler());
 
 		Menu serverMenu = new Menu("Server");
 		serverMenu.getItems().add(startItem);
@@ -112,6 +115,7 @@ public class MainUI extends Application {
 		startButton.setOnAction(EventHolder.getStartServerHandler());
 
 		ToggleButton syncButton = new ToggleButton("sync");
+		syncButton.setOnAction(EventHolder.getSynchronizeServerHandler());
 
 		ToggleButton stopButton = new ToggleButton("stop");
 		stopButton.setOnAction(EventHolder.getStopServerHandler());

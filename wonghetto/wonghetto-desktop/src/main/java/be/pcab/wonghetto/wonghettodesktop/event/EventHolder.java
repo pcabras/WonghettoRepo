@@ -11,6 +11,7 @@ import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
 import be.pcab.wonghetto.wonghettodesktop.bind.UIComponentsManager;
 import be.pcab.wonghetto.wonghettodesktop.tasks.CloudInitService;
 import be.pcab.wonghetto.wonghettodesktop.tasks.CloudReleaseService;
+import be.pcab.wonghetto.wonghettodesktop.tasks.CloudSynchronizeService;
 import be.pcab.wonghetto.wonghettodesktop.ui.CategoryPane;
 
 public class EventHolder {
@@ -103,6 +104,18 @@ public class EventHolder {
 		}
 	};
 
+	private static EventHandler<ActionEvent> syncronizeServerHandler = new EventHandler<ActionEvent>() {
+		
+		@Override
+		public void handle(ActionEvent event) {
+			
+			CloudSynchronizeService synchronizeService = new CloudSynchronizeService(null);
+			synchronizeService.start();
+		}
+	};
+	
+//	EVENTS GETTERS
+	
 	public static EventHandler<ActionEvent> getAddCategoryHandler() {
 
 		return addCategoryHandler;
@@ -126,5 +139,10 @@ public class EventHolder {
 	public static EventHandler<ActionEvent> getStopServerHandler(){
 		
 		return stopServerHandler;
+	}
+	
+	public static EventHandler<ActionEvent> getSynchronizeServerHandler(){
+		
+		return syncronizeServerHandler;
 	}
 }

@@ -16,7 +16,7 @@ public class WonghettoCloud {
 	
 	private WonghettoServer server;
 	
-	public void getIn(){
+	public synchronized void getIn(){
 		
 		WebappContext webappContext = WebContainer.createWebContext();
 		
@@ -29,12 +29,13 @@ public class WonghettoCloud {
 		}
 	}
 	
-	public void getOut(){
+	public synchronized void getOut(){
 		
 		server.stop();
 	}
 	
-	public void synchronize(CategoryModel...categoryModels ){
+	
+	public synchronized void synchronize(CategoryModel...categoryModels ){
 		
 //		my custom implementation
 	}
