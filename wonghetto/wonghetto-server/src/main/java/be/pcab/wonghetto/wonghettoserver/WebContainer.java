@@ -21,7 +21,7 @@ public class WebContainer {
 				.addContextInitParameter("contextClass",
 						"org.springframework.web.context.support.XmlWebApplicationContext");
 		webappContext.addContextInitParameter("contextConfigLocation",
-				"classpath*:spring-context.xml");
+				"classpath*:application-context.xml");
 		webappContext
 				.addListener("org.springframework.web.context.ContextLoaderListener");
 

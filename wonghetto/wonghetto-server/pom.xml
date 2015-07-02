@@ -63,5 +63,26 @@
   		<artifactId>jersey-media-json-jackson</artifactId>
   		<version>2.18</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.apache.derby</groupId>
+  		<artifactId>derbynet</artifactId>
+  		<version>10.11.1.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.derby</groupId>
+  		<artifactId>derbyclient</artifactId>
+  		<version>10.11.1.1</version>
+  	</dependency>
+  	 	
+  	<!--IMPORTANT!!! it contains both org.springframework.jdbc.datasource.DriverManagerDataSource (spring-jdbc) and 
+  	org.springframework.orm.hibernate4.LocalSessionFactoryBean (spring-orm)!!!The first class is needed for creating the datasource, 
+  	the secon one is needed for instantiating the sessionFactory 
+  	Spring-orm depends also on spring-jdbc, that's why that dependencies is not needed-->
+  	
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-orm</artifactId>
+  		<version>4.1.6.RELEASE</version>
+  	</dependency>
   </dependencies>
 </project>
