@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Thu Jul 02 15:37:32 CEST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-014e-4efc-91a4-000003dda320 
+on database directory /home/wong/WorkSpace/LUNA/wonghetto_GIT_repo/wonghetto/wonghetto-desktop/WonghettoStorage with class loader sun.misc.Launcher$AppClassLoader@c387f44 
+Loaded from file:/home/wong/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_40-b26
+user.dir=/home/wong/WorkSpace/LUNA/wonghetto_GIT_repo/wonghetto/wonghetto-desktop
+os.name=Linux
+os.arch=amd64
+os.version=4.0.5-200.fc21.x86_64
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
