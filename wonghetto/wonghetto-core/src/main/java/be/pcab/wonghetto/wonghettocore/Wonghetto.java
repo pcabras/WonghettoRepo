@@ -1,15 +1,32 @@
 package be.pcab.wonghetto.wonghettocore;
 
+
+/**
+ * 
+ * Abstract class representing a {@link Wonghetto} application.<br>
+ * Basically, it can be one of the two:<br>
+ * {@link WonghettoDesktop} (the desktop application) or {@link WonghettoApp} (the mobile application).
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public abstract class Wonghetto {
 
 	private ApplicationType applicationType;
 
-
+	/**
+	 * Switches the application on.
+	 * 
+	 */
 	public void switchOn() {
 
 		init();
 	}
 
+	/**
+	 * 
+	 * Switches the application off
+	 */
 	public void switchOff() {
 
 		releaseResources();
@@ -26,18 +43,30 @@ public abstract class Wonghetto {
 		this.applicationType = type;
 	}
 
+	/**
+	 * 
+	 * Initializes the application.
+	 */
 	protected void init() {
-		// TODO Auto-generated method stub
 		
+		// to be implemented		
 	}
 	
+	/**
+	 * 
+	 * Closes the application. 
+	 */
 	protected void exit() {
-		// TODO Auto-generated method stub
 		
+		// to be implemented
 	}
 
+	/**
+	 * 
+	 * Releases all resources.
+	 */
 	protected void releaseResources() {
-		// TODO Auto-generated method stub
 		
+		// to be implemented
 	}
 }

@@ -2,6 +2,13 @@ package be.pcab.wonghetto.wonghettocore;
 
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 
+/**
+ * 
+ * The desktop application
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class WonghettoDesktop extends Wonghetto{
 
 	@Override

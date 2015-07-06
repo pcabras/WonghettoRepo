@@ -3,6 +3,12 @@ package be.pcab.wonghetto.wonghettocore.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A class representing an available category of user-defined sub-cloud.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class CategoryModel {
 
 	private List<CategoryElementModel> elementModels;

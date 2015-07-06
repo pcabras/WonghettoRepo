@@ -4,6 +4,13 @@ import org.apache.commons.io.FileUtils;
 
 import javafx.beans.property.SimpleStringProperty;
 
+/**
+ * 
+ * A class representing a single element belongings to a category. 
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class CategoryElementModel {
 	
 

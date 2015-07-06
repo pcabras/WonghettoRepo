@@ -1,22 +1,32 @@
 package be.pcab.wonghetto.wonghettocore;
 
+/**
+ * 
+ * The mobile application.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class WonghettoApp extends Wonghetto{
 
 	@Override
 	protected void init() {
-		// TODO Auto-generated method stub
+		
+		// to be implemented		
 		super.init();
 	}
 
 	@Override
 	protected void exit() {
-		// TODO Auto-generated method stub
+		
+		// to be implemented
 		super.exit();
 	}
 
 	@Override
 	protected void releaseResources() {
-		// TODO Auto-generated method stub
+		
+		// to be implemented
 		super.releaseResources();
 	}
 

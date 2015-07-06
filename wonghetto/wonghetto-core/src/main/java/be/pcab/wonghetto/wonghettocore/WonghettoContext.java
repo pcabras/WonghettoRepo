@@ -3,6 +3,12 @@ package be.pcab.wonghetto.wonghettocore;
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 
 
+/**
+ * The context of the application.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class WonghettoContext {
 
 	private static WonghettoContext instance;

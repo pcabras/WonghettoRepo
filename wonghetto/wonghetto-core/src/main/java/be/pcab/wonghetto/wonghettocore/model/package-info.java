@@ -1,4 +1,6 @@
 /**
+ * Package for useful models.
+ * 
  * @author Paolo Cabras
  *
  */
