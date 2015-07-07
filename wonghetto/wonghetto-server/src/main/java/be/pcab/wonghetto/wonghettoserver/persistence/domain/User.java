@@ -8,6 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+/**
+ * 
+ * The class representing the User DB-table. 
+ * 
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Entity
 public class User implements Serializable {
 

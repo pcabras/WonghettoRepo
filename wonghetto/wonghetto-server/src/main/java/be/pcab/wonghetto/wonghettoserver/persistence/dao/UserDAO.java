@@ -5,11 +5,18 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.User;
 
-@Component
+/**
+ * A DAO object for accessing User table
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
+@Repository
 public class UserDAO implements GenericDAO<User> {
 
 	@Autowired

@@ -7,6 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+/**
+ * The class representing the Element DB-table.
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Entity
 public class Element implements Serializable {
 

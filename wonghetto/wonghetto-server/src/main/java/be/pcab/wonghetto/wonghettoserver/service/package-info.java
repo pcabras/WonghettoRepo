@@ -1,4 +1,6 @@
 /**
+ * The package for classes related to the service layer.
+ * 
  * @author Paolo Cabras
  *
  */

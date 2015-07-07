@@ -1,4 +1,7 @@
 /**
+ * 
+ * Package for domain objects.
+ * 
  * @author Paolo Cabras
  *
  */

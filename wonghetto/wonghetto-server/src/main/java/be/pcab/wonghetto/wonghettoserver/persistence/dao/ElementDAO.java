@@ -9,6 +9,14 @@ import org.springframework.stereotype.Repository;
 
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
 
+/**
+ * 
+ * DAO for accessing Element table.
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Repository
 public class ElementDAO implements GenericDAO<Element> {
 

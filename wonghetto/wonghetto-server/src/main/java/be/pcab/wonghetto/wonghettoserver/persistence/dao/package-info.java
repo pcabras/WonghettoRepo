@@ -1,4 +1,7 @@
 /**
+ * 
+ * Package for DAO objects.
+ * 
  * @author Paolo Cabras
  *
  */

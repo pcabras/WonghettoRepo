@@ -10,6 +10,14 @@ import org.springframework.stereotype.Repository;
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
 
 
+/**
+ * 
+ * DAO for Accessing the Category table.
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Repository
 public class CategoryDAO implements GenericDAO<Category> {
 

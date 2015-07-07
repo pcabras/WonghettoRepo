@@ -6,10 +6,24 @@ import org.apache.log4j.Logger;
 import org.glassfish.grizzly.servlet.WebappContext;
 import org.glassfish.jersey.servlet.ServletContainer;
 
+/**
+ * 
+ * A class representing the web container.<br>
+ * This class together with the {@link Configuration} class represents a servlet container
+ * and its configuration (deployment descriptor) 
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class WebContainer {
 
 	private static Logger logger = Logger.getLogger(WebContainer.class);
 	
+	/**
+	 * Creates and returns the {@link WebappContext}.
+	 * 
+	 * @return the {@link WebappContext}
+	 */
 	public static WebappContext createWebContext() {
 
 		logger.debug("Creating Web Context...");
@@ -30,6 +44,11 @@ public class WebContainer {
 		return webappContext;
 	}
 
+	/**
+	 * Registers the servlet according to the given {@link WebappContext}
+	 * 
+	 * @param webappContext
+	 */
 	public static void registerServlet(WebappContext webappContext) {
 
 		logger.debug("Registering Servlet parameters...");

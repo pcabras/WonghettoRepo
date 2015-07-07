@@ -10,6 +10,12 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.grizzly.http.server.NetworkListener;
 import org.glassfish.grizzly.servlet.WebappContext;
 
+/**
+ * The class representing Wonghetto Server
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class WonghettoServer {
 
 	private static Logger logger = Logger.getLogger(WonghettoServer.class);
@@ -28,6 +34,14 @@ public class WonghettoServer {
 	
 	private boolean stopped;
 
+	/**
+	 * It constructs Wonghetto Server reachable at the given url, listening to the given port
+	 * and according to the given {@link WebappContext}.
+	 * 
+	 * @param port
+	 * @param url
+	 * @param webappContext
+	 */
 	public WonghettoServer(int port, String url, WebappContext webappContext) {
 
 		this.port = port;
@@ -42,6 +56,11 @@ public class WonghettoServer {
 
 	}
 
+	/**
+	 * Starts the server
+	 * 
+	 * @throws IOException
+	 */
 	public void start() throws IOException {
 
 		initializeServer();
@@ -51,6 +70,10 @@ public class WonghettoServer {
 		logger.debug("Server started");
 	}
 
+	/**
+	 * Initializes the server
+	 * 
+	 */
 	private void initializeServer() {
 
 		server = new HttpServer();
@@ -64,6 +87,10 @@ public class WonghettoServer {
 		setStopped(false);
 	}
 
+	/**
+	 * 
+	 * Stops the server
+	 */
 	public void stop() {
 
 		server.shutdown();

@@ -9,6 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+/**
+ * The class representing the Category DB-table. 
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Entity
 public class Category implements Serializable {
 

@@ -2,6 +2,13 @@ package be.pcab.wonghetto.wonghettoserver.persistence.dao;
 
 import java.util.List;
 
+/**
+ * A generic interface for DAO objects.
+ * 
+ * @author Paolo Cabras
+ *
+ * @param <E>
+ */
 public interface GenericDAO <E>{
 
 	/**
