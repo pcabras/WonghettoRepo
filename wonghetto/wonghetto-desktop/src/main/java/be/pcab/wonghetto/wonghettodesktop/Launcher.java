@@ -7,7 +7,12 @@ import be.pcab.wonghetto.wonghettocore.WonghettoContext;
 import be.pcab.wonghetto.wonghettodesktop.ui.MainUI;
 import javafx.application.Application;
 
-
+/**
+ * The launcher of the desktop application
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class Launcher {
 
 

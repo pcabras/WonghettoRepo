@@ -1,7 +1,6 @@
 package be.pcab.wonghetto.wonghettodesktop.ui;
 
 import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
-import be.pcab.wonghetto.wonghettodesktop.bind.UIComponentsManager;
 import be.pcab.wonghetto.wonghettodesktop.event.EventHolder;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -19,6 +18,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Root class for view layer.<br>
+ * It is an extension of the {@link Application} class, the base class of UI applications
+ * according to the JavaFX pattern.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class MainUI extends Application {
 
 	private BorderPane mainPane;
@@ -46,6 +53,11 @@ public class MainUI extends Application {
 
 	}
 
+	/**
+	 * Creates the MenuBar.
+	 * 
+	 * @return
+	 */
 	private MenuBar createMenuBar() {
 
 		// MENU FILE
@@ -106,6 +118,11 @@ public class MainUI extends Application {
 		return menuBar;
 	}
 
+	/**
+	 * Creates the Toolbar.
+	 * 
+	 * @return
+	 */
 	private ToolBar createToolBar() {
 
 		ToggleButton newButton = new ToggleButton("new");
@@ -133,6 +150,12 @@ public class MainUI extends Application {
 
 	}
 
+	/**
+	 * 
+	 * Creates the top area of the main border container.  
+	 * 
+	 * @return the top area
+	 */
 	private VBox createTop() {
 
 		VBox box = new VBox();
@@ -143,6 +166,11 @@ public class MainUI extends Application {
 		return box;
 	}
 
+	/**
+	 * Creates the center area of the main border container
+	 * 
+	 * @return the center area
+	 */
 	private TabPane createCenter() {
 
 		CategoryModel categoryModel = new CategoryModel();
@@ -165,6 +193,11 @@ public class MainUI extends Application {
 		return tabPane;
 	}
 
+	/**
+	 * Creates the bottom area of the main border container
+	 * 
+	 * @return the bottom area
+	 */
 	private HBox createBottom() {
 		
 		return componentManager.getStatusBar();

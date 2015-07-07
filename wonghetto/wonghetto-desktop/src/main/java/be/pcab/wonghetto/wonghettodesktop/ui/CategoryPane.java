@@ -15,7 +15,16 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
-
+/**
+ * 
+ * The basic element in the view layer.<br>
+ * Users are let free to organize themselves their own exposed cloud. So, this is<br>
+ * a custom {@link TitledPane} (each pane represent a category) containing a modifiable {@link TableView} which shows<br> 
+ * all elements available in the given category. 
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class CategoryPane extends TitledPane {
 
 	private VBox vBox;
@@ -38,6 +47,10 @@ public class CategoryPane extends TitledPane {
 
 	}
 
+	/**
+	 * Builds the pane.
+	 * 
+	 */
 	private void buildPane() {
 
 		// CREATE BUTTONS PANE
@@ -72,7 +85,7 @@ public class CategoryPane extends TitledPane {
 				.setCellValueFactory(new PropertyValueFactory<CategoryElementModel, String>(
 						"size"));
 
-		/*TableView<CategoryElementModel>*/ table = new TableView<CategoryElementModel>(
+		table = new TableView<CategoryElementModel>(
 				elementModels);
 
 		table.setEditable(true);

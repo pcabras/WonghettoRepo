@@ -1,4 +1,6 @@
 /**
+ * Package for event related objects.
+ * 
  * @author Paolo Cabras
  *
  */

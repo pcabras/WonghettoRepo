@@ -3,10 +3,17 @@ package be.pcab.wonghetto.wonghettodesktop.tasks;
 import be.pcab.wonghetto.wonghettocore.WonghettoContext;
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
-import be.pcab.wonghetto.wonghettodesktop.bind.UIComponentsManager;
+import be.pcab.wonghetto.wonghettodesktop.ui.UIComponentsManager;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 
+/**
+ * An appropriate implementation of the {@link Service} interface.<br>
+ * It is in charge of synchronizing the cloud with user's view.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class CloudSynchronizeService extends Service<Void> {
 
 	private UIComponentsManager componentManager;

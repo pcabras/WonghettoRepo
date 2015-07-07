@@ -1,7 +1,7 @@
 
 /**
  * 
- * Root package for UI 
+ * Root package for UI related objects .
  * 
  * @author Paolo Cabras
  *

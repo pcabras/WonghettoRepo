@@ -8,12 +8,21 @@ import javafx.scene.control.TextInputDialog;
 import javafx.stage.FileChooser;
 import be.pcab.wonghetto.wonghettocore.model.CategoryElementModel;
 import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
-import be.pcab.wonghetto.wonghettodesktop.bind.UIComponentsManager;
 import be.pcab.wonghetto.wonghettodesktop.tasks.CloudInitService;
 import be.pcab.wonghetto.wonghettodesktop.tasks.CloudReleaseService;
 import be.pcab.wonghetto.wonghettodesktop.tasks.CloudSynchronizeService;
 import be.pcab.wonghetto.wonghettodesktop.ui.CategoryPane;
+import be.pcab.wonghetto.wonghettodesktop.ui.UIComponentsManager;
 
+/**
+ * 
+ * An holder for events.<br>
+ * Events needs to be available for several controls at the same time, so,<br>
+ * through the {@link EventHolder}, they are easily accessible thanks to static getters.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class EventHolder {
 
 	private static UIComponentsManager componentManager = UIComponentsManager
@@ -116,6 +125,7 @@ public class EventHolder {
 	
 //	EVENTS GETTERS
 	
+
 	public static EventHandler<ActionEvent> getAddCategoryHandler() {
 
 		return addCategoryHandler;

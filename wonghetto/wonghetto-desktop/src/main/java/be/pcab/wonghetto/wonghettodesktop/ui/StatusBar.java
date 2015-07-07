@@ -4,6 +4,13 @@ package be.pcab.wonghetto.wonghettodesktop.ui;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 
+/**
+ * The Statusbar for the wonghetto-desktop application.<br>
+ * This bar is meant for notification related to user work flow.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class StatusBar extends HBox {
 	
 	private TextField textField;

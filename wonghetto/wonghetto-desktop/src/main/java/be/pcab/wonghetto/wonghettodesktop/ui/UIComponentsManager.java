@@ -1,13 +1,19 @@
-package be.pcab.wonghetto.wonghettodesktop.bind;
+package be.pcab.wonghetto.wonghettodesktop.ui;
 
 
-import be.pcab.wonghetto.wonghettodesktop.ui.StatusBar;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 
-
+/**
+ *  
+ * A help class which allow easy access to UI components and containers.<br>
+ * It is mostly a singleton exposing getters and setters.
+ * 
+ * @author Paolo Cabras
+ *
+ */
 public class UIComponentsManager {
 	
 	private static UIComponentsManager instance;
