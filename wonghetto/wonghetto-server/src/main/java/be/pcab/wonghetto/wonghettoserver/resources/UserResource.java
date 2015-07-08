@@ -14,8 +14,16 @@ import org.springframework.stereotype.Component;
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.User;
 import be.pcab.wonghetto.wonghettoserver.service.UserTXManager;
 
+/**
+ * 
+ * The class representing REST resources for for dealing with {@link User}s operations.
+ * 
+ * @author Paolo Cabras
+ *
+ */
+
 @Component
-@Path("user")
+@Path("/user")
 public class UserResource {
 
 	private static Logger logger = Logger.getLogger(UserResource.class);
