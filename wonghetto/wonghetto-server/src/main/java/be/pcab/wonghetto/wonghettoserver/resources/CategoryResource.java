@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
-import be.pcab.wonghetto.wonghettoserver.service.CategoryTXManager;
+import be.pcab.wonghetto.wonghettoserver.service.CategoryTX;
 
 /**
  * The class representing REST resources for dealing with {@link Category}ies operations.
@@ -28,7 +28,7 @@ public class CategoryResource {
 	private static Logger logger = Logger.getLogger(CategoryResource.class);
 	
 	@Autowired
-	private CategoryTXManager categoryTXManager;
+	private CategoryTX categoryTXManager;
 	
 	
 	/**

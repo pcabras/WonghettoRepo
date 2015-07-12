@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.User;
-import be.pcab.wonghetto.wonghettoserver.service.UserTXManager;
+import be.pcab.wonghetto.wonghettoserver.service.UserTX;
 
 /**
  * 
@@ -29,7 +29,7 @@ public class UserResource {
 	private static Logger logger = Logger.getLogger(UserResource.class);
 	
 	@Autowired
-	private UserTXManager userTxManager;
+	private UserTX userTxManager;
 	
 	/**
 	 * POST method for storing users into DB.

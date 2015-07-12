@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
-import be.pcab.wonghetto.wonghettoserver.service.ElementTXManager;
+import be.pcab.wonghetto.wonghettoserver.service.ElementTX;
 
 /**
  * The class representing REST resources for dealing with {@link Element}s operations.
@@ -28,7 +28,7 @@ public class ElementResource {
 	private static Logger logger = Logger.getLogger(ElementResource.class);
 	
 	@Autowired
-	private ElementTXManager elementTXManager;
+	private ElementTX elementTXManager;
 	
 	/**
 	 * POST method for storing {@link Element}s into DB.
