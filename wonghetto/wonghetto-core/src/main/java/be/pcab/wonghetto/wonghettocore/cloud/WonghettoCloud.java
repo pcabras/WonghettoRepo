@@ -35,7 +35,7 @@ public class WonghettoCloud {
 	 */
 	public synchronized void getIn(){
 		
-		WebappContext webappContext = WebContainer.createWebContext();
+		WebappContext webappContext = WebContainer.createWebContext(false);
 		
 		server = new WonghettoServer(8082, null, webappContext);
 		

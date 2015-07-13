@@ -17,7 +17,7 @@ public class WonghettoServerTest {
 		
 		WebContainer webContainer = new WebContainer();
 		
-		WebappContext webappContext = webContainer.createWebContext();
+		WebappContext webappContext = webContainer.createWebContext(true);
 		
 		server = new WonghettoServer(8082, null, webappContext);
 		
