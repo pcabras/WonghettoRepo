@@ -1,5 +1,7 @@
 package be.pcab.wonghetto.wonghettoserver.service;
 
+import java.util.List;
+
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
 
 /**
@@ -41,4 +43,14 @@ public interface CategoryTX {
 	 * @throws Exception
 	 */
 	Category getById(long id) throws Exception;
+	
+	/**
+	 * Gets all {@link Category}ies corresponding to the given userName
+	 * 
+	 * @param userName
+	 * @return
+	 * @throws Exception
+	 */
+	List<Category> getByUserName(String userName) throws Exception;
+	
 }

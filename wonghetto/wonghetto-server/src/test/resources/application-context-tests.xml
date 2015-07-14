@@ -23,6 +23,8 @@
 
 	<jdbc:initialize-database data-source="dataSource">
 		<jdbc:script location="classpath:sql-script/user.sql" />
+		<jdbc:script location="classpath:sql-script/category.sql" />
+		<jdbc:script location="classpath:sql-script/element.sql" />
 	</jdbc:initialize-database>
 
 	<bean id="sessionFactory"

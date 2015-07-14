@@ -1,5 +1,7 @@
 package be.pcab.wonghetto.wonghettoserver.service;
 
+import java.util.List;
+
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
 
 /**
@@ -42,4 +44,6 @@ public interface ElementTX {
 	 * @throws Exception
 	 */
 	Element getById(long id) throws Exception;
+	
+	List<Element> getByCategoryName(String categoryName) throws Exception;
 }
