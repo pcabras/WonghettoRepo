@@ -29,5 +29,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/home/wong/WorkSpace/jTCPfwd-lite-0.5/jTCPfwd-lite.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
