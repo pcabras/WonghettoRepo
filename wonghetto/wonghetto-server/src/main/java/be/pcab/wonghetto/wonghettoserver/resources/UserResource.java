@@ -1,10 +1,13 @@
 package be.pcab.wonghetto.wonghettoserver.resources;
 
+import java.util.List;
+
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
@@ -94,11 +97,14 @@ public class UserResource {
 	 */
 	@Path("/")
 	@DELETE
-	public Response deleteUser(User user){
+	public Response deleteUser(@QueryParam("userName") String userName){
 		
 		Response response = null;
 		
 		try {
+			
+			User user = userTxManager.getByUserName(userName);
+			
 			userTxManager.delete(user);
 			
 			response = Response.ok().build();
@@ -121,7 +127,7 @@ public class UserResource {
 	 */
 	@Path("/")
 	@GET
-	public Response getUser(String userName){
+	public Response getUser(@QueryParam("userName")String userName){
 		
 		Response response = null;
 		
@@ -142,5 +148,31 @@ public class UserResource {
 		return response;
 	}
 	
-	
+	/**
+	 * GET method for retrieving all stored {@link User}s
+	 * 
+	 * @return the list of all stored users
+	 */
+	@Path("/all")
+	@GET
+	public Response getUsers(){
+		
+		Response response = null;
+		
+		try {
+			
+			
+			List<User> users = userTxManager.getAll();
+			
+			response = Response.ok(users).build();
+			
+		} catch (Exception e) {
+			
+			logger.error(e);
+			
+			response = Response.noContent().build();
+		}
+		
+		return response;
+	}
 }

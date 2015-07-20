@@ -6,6 +6,7 @@ import org.glassfish.jersey.server.ResourceConfig;
 import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
 import be.pcab.wonghetto.wonghettoserver.resources.CategoryResource;
 import be.pcab.wonghetto.wonghettoserver.resources.ElementResource;
+import be.pcab.wonghetto.wonghettoserver.resources.InfoResource;
 import be.pcab.wonghetto.wonghettoserver.resources.UserResource;
 
 
@@ -25,6 +26,7 @@ public class Configuration extends ResourceConfig {
 		
 		logger.debug("Configuring Resources...");
 		
+		this.register(InfoResource.class);
 		this.register(UserResource.class);
 		this.register(CategoryResource.class);
 		this.register(ElementResource.class);

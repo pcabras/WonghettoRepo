@@ -37,7 +37,7 @@ public class InfoResource {
 		
 		logger.debug(jsonObject.toJSONString());
 		
-		response = Response.ok(jsonObject).build();
+//		response = Response.ok(jsonObject).build();
 		
 		return response;
 	}

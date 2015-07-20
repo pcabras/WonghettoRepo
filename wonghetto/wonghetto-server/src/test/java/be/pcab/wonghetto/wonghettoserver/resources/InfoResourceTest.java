@@ -48,6 +48,8 @@ public class InfoResourceTest {
 		forwardServer(targetAddress);
 		
 		WebappContext webappContext = WebContainer.createWebContext(true);
+		
+		WebContainer.registerServlet(webappContext);
 
 		server = new WonghettoServer(8082, null, webappContext);
 		server.start();
@@ -71,13 +73,16 @@ public class InfoResourceTest {
 		Response response = client.target("http://" + targetAddress + ":80").path("/info")
 				.request().get();
 
-//		 JSONObject jsonObject = response.readEntity(JSONObject.class);
+//		Response response = client.target("http://localhost:8082").path("/info")
+//				.request().get();
 
-		String retrieved = response.readEntity(String.class);
+		String expected = "Target Reached";
+		
+		String actual = response.readEntity(String.class);
 
-		assertNotNull( /*jsonObject*/ retrieved);
+		assertEquals(expected, actual);
 
-		 System.out.println(retrieved);
+		 System.out.println(actual);
 	}
 
 	private String getExternalIP() {
