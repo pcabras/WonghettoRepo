@@ -1,5 +1,7 @@
 package be.pcab.wonghetto.wonghettoserver.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -47,6 +49,20 @@ public class CategoryTXManager implements CategoryTX {
 	public Category getById(long id) throws Exception {
 
 		return categoryDAO.getById(id);
+	}
+
+	@Transactional(readOnly=true,propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Category> getByUserName(String userName) throws Exception {
+		
+		return categoryDAO.getByUserName(userName);
+	}
+
+	@Transactional(readOnly=true,propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Category> getAll() throws Exception {
+		
+		return categoryDAO.getAll();
 	}
 
 }

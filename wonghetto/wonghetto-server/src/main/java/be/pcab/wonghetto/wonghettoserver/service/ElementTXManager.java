@@ -1,5 +1,7 @@
 package be.pcab.wonghetto.wonghettoserver.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -47,6 +49,22 @@ public class ElementTXManager implements ElementTX{
 	public Element getById(long id) throws Exception {
 		
 		return elementDAO.getById(id);
+	}
+
+	@Transactional(readOnly=true,propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Element> getByCategoryName(String categoryName)
+			throws Exception {
+		
+		return elementDAO.getByCategoryName(categoryName);
+	}
+
+	@Transactional(readOnly=true, propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Element> getByCategoryAndUserName(String categoryName,
+			String userName) throws Exception {
+		
+		return elementDAO.getByCategoryAndUserName(categoryName, userName);
 	}
 
 }

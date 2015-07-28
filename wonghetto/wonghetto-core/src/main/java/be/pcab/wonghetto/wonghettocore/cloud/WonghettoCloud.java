@@ -2,6 +2,8 @@ package be.pcab.wonghetto.wonghettocore.cloud;
 
 import java.io.IOException;
 
+import javafx.collections.ObservableList;
+
 import org.apache.log4j.Logger;
 import org.glassfish.grizzly.servlet.WebappContext;
 
@@ -33,7 +35,7 @@ public class WonghettoCloud {
 	 */
 	public synchronized void getIn(){
 		
-		WebappContext webappContext = WebContainer.createWebContext();
+		WebappContext webappContext = WebContainer.createWebContext(false);
 		
 		server = new WonghettoServer(8082, null, webappContext);
 		
@@ -58,9 +60,10 @@ public class WonghettoCloud {
 	 * 
 	 * @param categoryModels Objects carrying info to be synchronized.
 	 */
-	public synchronized void synchronize(CategoryModel...categoryModels ){
+	public synchronized void synchronize(ObservableList<CategoryModel> categoryModels){
 		
-//		my custom implementation
+//		if(categoryModels.isEmpty())
+		
 	}
 
 }

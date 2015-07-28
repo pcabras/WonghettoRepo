@@ -5,8 +5,11 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  * 
@@ -18,6 +21,7 @@ import javax.persistence.OneToMany;
  */
 
 @Entity
+@Table(name="Users")
 public class User implements Serializable {
 
 	/**
@@ -26,6 +30,8 @@ public class User implements Serializable {
 	private static final long serialVersionUID = 3874940128069324700L;
 	
 	@Id
+	@Column
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long userId;
 	
 	@Column

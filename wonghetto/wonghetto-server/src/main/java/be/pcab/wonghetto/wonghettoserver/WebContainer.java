@@ -9,8 +9,8 @@ import org.glassfish.jersey.servlet.ServletContainer;
 /**
  * 
  * A class representing the web container.<br>
- * This class together with the {@link Configuration} class represents a servlet container
- * and its configuration (deployment descriptor) 
+ * This class together with the {@link Configuration} class represents a servlet
+ * container and its configuration (deployment descriptor)
  * 
  * @author Paolo Cabras
  *
@@ -18,29 +18,36 @@ import org.glassfish.jersey.servlet.ServletContainer;
 public class WebContainer {
 
 	private static Logger logger = Logger.getLogger(WebContainer.class);
-	
+
+	private static String configFileLocation = "";
+
 	/**
 	 * Creates and returns the {@link WebappContext}.
 	 * 
 	 * @return the {@link WebappContext}
 	 */
-	public static WebappContext createWebContext() {
+	public static WebappContext createWebContext(boolean debugMode) {
 
 		logger.debug("Creating Web Context...");
-		
+
 		WebappContext webappContext = new WebappContext(
 				"Wonghetto Server Web Context");
 
 		webappContext
 				.addContextInitParameter("contextClass",
 						"org.springframework.web.context.support.XmlWebApplicationContext");
+
+		configFileLocation = debugMode ? "classpath*:application-context-tests.xml"
+				: "classpath*:application-context.xml";
+
 		webappContext.addContextInitParameter("contextConfigLocation",
-				"classpath*:application-context.xml");
+				configFileLocation);
+
 		webappContext
 				.addListener("org.springframework.web.context.ContextLoaderListener");
 
 		logger.debug("Web Context created");
-		
+
 		return webappContext;
 	}
 
@@ -52,7 +59,7 @@ public class WebContainer {
 	public static void registerServlet(WebappContext webappContext) {
 
 		logger.debug("Registering Servlet parameters...");
-		
+
 		ServletRegistration servletRegistration = webappContext.addServlet(
 				"wonghetto servlet", ServletContainer.class);
 
@@ -62,7 +69,7 @@ public class WebContainer {
 		servletRegistration.setInitParameter(
 				"com.sun.jersey.config.property.packages",
 				"be.pcab.wonghetto.wonghettoserver");
-		
+
 		logger.debug("Servlet Parameters registered");
 	}
 

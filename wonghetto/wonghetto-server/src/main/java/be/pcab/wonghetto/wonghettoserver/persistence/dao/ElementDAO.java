@@ -22,39 +22,62 @@ public class ElementDAO implements GenericDAO<Element> {
 
 	@Autowired
 	private SessionFactory sessionFactory;
-	
+
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Element> getAll() {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		return (List<Element>) session.createCriteria(Element.class).list();
 	}
 
 	@Override
 	public Element getById(long id) {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		return (Element) session.get(Element.class, id);
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<Element> getByCategoryName(String categoryName) {
+
+		Session session = sessionFactory.getCurrentSession();
+		return session
+				.createQuery(
+						"select e from Element e join e.category c where c.name = :categoryName")
+				.setParameter("categoryName", categoryName).list();
+	}
+
+//	FIX ME!!!THIA QUERY WORKS BUT CAN BE DONE BETTER	
+	@SuppressWarnings("unchecked")
+	public List<Element> getByCategoryAndUserName(String categoryName,
+			String userName) {
+
+		Session session = sessionFactory.getCurrentSession();
+		return session
+				.createQuery(
+						"select e from Element e join e.category c where c.name = :categoryName and c.user.userName = :userName")
+				.setParameter("categoryName", categoryName)
+				.setParameter("userName", userName).list();
+	}
+
 	@Override
 	public void insert(Element entity) {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		session.save(entity);
 	}
 
 	@Override
 	public void update(Element entity) {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		session.update(entity);
 	}
 
 	@Override
 	public void delete(Element entity) {
-		
+
 		Session session = sessionFactory.getCurrentSession();
 		session.delete(entity);
 	}

@@ -4,6 +4,7 @@ import be.pcab.wonghetto.wonghettocore.WonghettoContext;
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 import be.pcab.wonghetto.wonghettocore.model.CategoryModel;
 import be.pcab.wonghetto.wonghettodesktop.ui.UIComponentsManager;
+import javafx.collections.ObservableList;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 
@@ -18,9 +19,9 @@ public class CloudSynchronizeService extends Service<Void> {
 
 	private UIComponentsManager componentManager;
 
-	private CategoryModel[] categoryModels;
+	private ObservableList<CategoryModel> categoryModels;
 
-	public CloudSynchronizeService(CategoryModel[] categoryModels) {
+	public CloudSynchronizeService(ObservableList<CategoryModel> categoryModels) {
 
 		componentManager = UIComponentsManager.getInstance();
 		this.categoryModels = categoryModels;

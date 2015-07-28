@@ -52,7 +52,7 @@ public class WonghettoServer {
 
 		URI BASE_URI = UriBuilder.fromUri(connectionUrl).port(port).build();
 
-		SERVER_ADDRESS = BASE_URI.getHost();
+		SERVER_ADDRESS = BASE_URI.getHost()/*connectionUrl*/;
 
 	}
 
