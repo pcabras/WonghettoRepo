@@ -71,6 +71,14 @@ public class Element implements Serializable {
 	public long getElementId() {
 		return elementId;
 	}
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
 	
 	
 }

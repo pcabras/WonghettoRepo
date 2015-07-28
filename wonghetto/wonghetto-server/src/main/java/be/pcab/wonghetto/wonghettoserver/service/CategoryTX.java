@@ -53,4 +53,13 @@ public interface CategoryTX {
 	 */
 	List<Category> getByUserName(String userName) throws Exception;
 	
+	/**
+	 * 
+	 * Gets all available {@link Category}ies
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	List<Category> getAll() throws Exception;
+	
 }

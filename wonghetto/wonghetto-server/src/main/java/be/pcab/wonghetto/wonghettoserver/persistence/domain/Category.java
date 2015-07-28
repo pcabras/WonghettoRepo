@@ -12,6 +12,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+import org.hibernate.annotations.Type;
+
 /**
  * The class representing the Category DB-table. 
  * 
@@ -37,6 +41,7 @@ public class Category implements Serializable {
 	private User user;
 	
 	@OneToMany(mappedBy="category")
+	@Cascade(CascadeType.DELETE)
 	private List<Element> elements;
 	
 	public Category() {
@@ -53,6 +58,14 @@ public class Category implements Serializable {
 
 	public long getCategoryId() {
 		return categoryId;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 	
 	

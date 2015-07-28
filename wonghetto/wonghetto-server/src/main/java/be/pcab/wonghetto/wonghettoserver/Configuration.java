@@ -3,7 +3,6 @@ package be.pcab.wonghetto.wonghettoserver;
 import org.apache.log4j.Logger;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
 import be.pcab.wonghetto.wonghettoserver.resources.CategoryResource;
 import be.pcab.wonghetto.wonghettoserver.resources.ElementResource;
 import be.pcab.wonghetto.wonghettoserver.resources.InfoResource;

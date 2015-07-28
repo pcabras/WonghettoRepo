@@ -58,4 +58,11 @@ public class CategoryTXManager implements CategoryTX {
 		return categoryDAO.getByUserName(userName);
 	}
 
+	@Transactional(readOnly=true,propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Category> getAll() throws Exception {
+		
+		return categoryDAO.getAll();
+	}
+
 }

@@ -59,4 +59,12 @@ public class ElementTXManager implements ElementTX{
 		return elementDAO.getByCategoryName(categoryName);
 	}
 
+	@Transactional(readOnly=true, propagation=Propagation.REQUIRES_NEW)
+	@Override
+	public List<Element> getByCategoryAndUserName(String categoryName,
+			String userName) throws Exception {
+		
+		return elementDAO.getByCategoryAndUserName(categoryName, userName);
+	}
+
 }

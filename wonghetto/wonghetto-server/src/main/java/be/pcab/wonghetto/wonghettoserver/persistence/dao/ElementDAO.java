@@ -48,6 +48,19 @@ public class ElementDAO implements GenericDAO<Element> {
 				.setParameter("categoryName", categoryName).list();
 	}
 
+//	FIX ME!!!THIA QUERY WORKS BUT CAN BE DONE BETTER	
+	@SuppressWarnings("unchecked")
+	public List<Element> getByCategoryAndUserName(String categoryName,
+			String userName) {
+
+		Session session = sessionFactory.getCurrentSession();
+		return session
+				.createQuery(
+						"select e from Element e join e.category c where c.name = :categoryName and c.user.userName = :userName")
+				.setParameter("categoryName", categoryName)
+				.setParameter("userName", userName).list();
+	}
+
 	@Override
 	public void insert(Element entity) {
 
