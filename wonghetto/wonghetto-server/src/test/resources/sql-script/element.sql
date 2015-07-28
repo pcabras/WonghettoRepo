@@ -10,3 +10,5 @@ INSERT INTO Elements (name, path, size, category_categoryId )
 	VALUES ('Electrabel_Mars.pdf', '/home/wongchang/Documenti/Bonifici/Electrabel', '43,9 KiB', 2);
 INSERT INTO Elements (name, path, size, category_categoryId ) 
 	VALUES ('fakeName', '/fake/path', '1 Kib', 3);
+INSERT INTO Elements (name, path, size, category_categoryId ) 
+	VALUES ('elementToRemove', '/fake/path', '1 Kib', 3);

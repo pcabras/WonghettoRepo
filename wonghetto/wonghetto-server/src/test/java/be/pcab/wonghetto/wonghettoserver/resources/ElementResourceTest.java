@@ -90,7 +90,7 @@ public class ElementResourceTest {
 		@SuppressWarnings("unchecked")
 		List<Element> elements = response.readEntity(List.class);
 
-		int expected = 2;
+		int expected = 3;
 
 		int actual = elements.size();
 
@@ -120,17 +120,31 @@ public class ElementResourceTest {
 
 		response = client.target(basicURI).queryParam("id", 6).request()
 				.accept(MediaType.APPLICATION_JSON).get();
-		
+
 		element = response.readEntity(Element.class);
-		
+
 		String actualName = element.getName();
-		
+
 		assertEquals(expectedName, actualName);
 	}
 
-	// @Test
-	// public void testDeleteElement() {
-	// fail("Not yet implemented");
-	// }
+	@Test
+	public void testDeleteElement() {
 
+		Response response = client.target(basicURI).queryParam("id", 7)
+				.request().accept(MediaType.APPLICATION_JSON).delete();
+
+		int expectedStatus = 200;
+
+		int actualStatus = response.getStatus();
+
+		assertEquals(expectedStatus, actualStatus);
+
+		response = client.target(basicURI).queryParam("id", 7).request()
+				.accept(MediaType.APPLICATION_JSON).get();
+
+		Element element = response.readEntity(Element.class);
+		
+		assertNull(element);
+	}
 }

@@ -106,12 +106,14 @@ public class ElementResource {
 	 */
 	@Path("/")
 	@DELETE
-	public Response deleteElement(Element element) {
+	public Response deleteElement(@QueryParam("id")long id) {
 
 		Response response = null;
 
 		try {
 
+			Element element = elementTXManager.getById(id);
+			
 			elementTXManager.delete(element);
 
 			response = Response.ok().build();
