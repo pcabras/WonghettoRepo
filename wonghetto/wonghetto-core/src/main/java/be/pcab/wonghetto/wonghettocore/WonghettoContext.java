@@ -1,5 +1,7 @@
 package be.pcab.wonghetto.wonghettocore;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 
 
@@ -9,7 +11,8 @@ import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
  * @author Paolo Cabras
  *
  */
-public class WonghettoContext {
+
+public class WonghettoContext extends AnnotationConfigApplicationContext{
 
 	private static WonghettoContext instance;
 	
@@ -19,6 +22,8 @@ public class WonghettoContext {
 	
 	private WonghettoContext() {
 		
+		this.scan("be.pcab.wonghetto");
+		this.refresh();
 	}
 	
 	public static WonghettoContext getInstance(){
