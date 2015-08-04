@@ -28,7 +28,7 @@
 	</jdbc:initialize-database>
 
 	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="packagesToScan"
 			value="be.pcab.wonghetto.wonghettoserver.persistence.domain">
@@ -43,21 +43,6 @@
 		</property>
 	</bean>
 	
-	<!-- <bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource"></property>
-		<property name="packagesToScan"
-			value="be.pcab.wonghetto.wonghettoserver.persistence.domain">
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.DerbyDialect</prop>
-				<prop key="hibernate.hbm2ddl.auto">create-drop</prop>
-				<prop key="hibernate.show_sql">true</prop>
-
-			</props>
-		</property>
-	</bean> -->
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 

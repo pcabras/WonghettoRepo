@@ -1,6 +1,7 @@
 package be.pcab.wonghetto.wonghettocore;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
 
@@ -12,7 +13,7 @@ import be.pcab.wonghetto.wonghettocore.cloud.WonghettoCloud;
  *
  */
 
-public class WonghettoContext extends AnnotationConfigApplicationContext{
+public class WonghettoContext extends ClassPathXmlApplicationContext{
 
 	private static WonghettoContext instance;
 	
@@ -22,8 +23,8 @@ public class WonghettoContext extends AnnotationConfigApplicationContext{
 	
 	private WonghettoContext() {
 		
-		this.scan("be.pcab.wonghetto");
-		this.refresh();
+		setConfigLocation("classpath:**/application-context-tests.xml");
+		refresh();
 	}
 	
 	public static WonghettoContext getInstance(){

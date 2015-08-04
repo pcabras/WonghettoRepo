@@ -23,10 +23,6 @@ public class WonghettoContestTest {
 
 	private WonghettoContext context;
 
-	private AnnotationConfigApplicationContext applicationContext;
-
-	private WonghettoServer server;
-
 	@Before
 	public void setUp() throws Exception {
 
@@ -34,25 +30,20 @@ public class WonghettoContestTest {
 
 		context.refresh();
 
-		WebContainer webContainer = new WebContainer();
 
-		WebappContext webappContext = webContainer.createWebContext(true);
-		
-		server = new WonghettoServer(8082, null, webappContext);
 	}
 
 	@After
 	public void tearDown() throws Exception {
 
-		server.stop();
 	}
 
 	@Test
 	public void testRetrievingSpringComponents() {
 
-		AnnotatedTestBean annotatedTestBean = (AnnotatedTestBean) context.getBean("notAnnotatedTestBean");
+		CategoryTX categoryTX = (CategoryTX) context.getBean("categoryTXManager");
 		
-		assertNotNull(annotatedTestBean);
+		assertNotNull(categoryTX);
 	}
 
 }

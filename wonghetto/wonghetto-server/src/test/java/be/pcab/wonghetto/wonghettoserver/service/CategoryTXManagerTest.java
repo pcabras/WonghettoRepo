@@ -29,7 +29,7 @@ import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
  *
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations="classpath*:application-context-tests-improved.xml")
+@ContextConfiguration(locations="classpath*:application-context-tests.xml")
 public class CategoryTXManagerTest {
 
 	@Autowired
