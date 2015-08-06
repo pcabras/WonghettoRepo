@@ -1,35 +1,27 @@
 package be.pcab.wonghetto.wonghettoserver.exchangeprotocol;
 
-import java.util.concurrent.CountDownLatch;
 
 import org.json.simple.JSONObject;
 
+
 public class Request {
 	
-	private JSONObject content;
-	
-	private CountDownLatch latch;
+	private JSONObject json;
 	
 	public Request() {
 		
-		latch = new CountDownLatch(1);
 	}
 
-	public JSONObject getContent() {
-		return content;
+	public JSONObject getJson() {
+		return json;
 	}
 
-	public void setContent(JSONObject content) {
-		this.content = content;
+	public void setJson(JSONObject json) {
+		this.json = json;
 	}
-	
-	public CountDownLatch getLatch(){
+
+	public RequestType getRequestType(){
 		
-		return latch;
-	}
-
-	public void markAsProcessed(){
-		
-		latch.countDown();
+		return (RequestType) json.get("Type");
 	}
 }

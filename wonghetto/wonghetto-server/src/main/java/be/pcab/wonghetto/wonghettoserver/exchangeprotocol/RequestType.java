@@ -4,5 +4,8 @@ public enum RequestType {
 	
 	UPLOAD,
 	DOWNLOAD,
-	INFO;
+	INFO,
+	PROCESSED,
+	CLOUD_MIRROR;
+	
 }
