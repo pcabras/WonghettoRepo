@@ -1,4 +1,4 @@
-package be.pcab.wonghetto.wonghettoserver.persistence.dao;
+package be.pcab.wonghetto.wonghettocore.persistence.dao;
 
 import java.util.List;
 

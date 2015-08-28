@@ -1,8 +1,7 @@
-package be.pcab.wonghetto.wonghettoserver.service;
+package be.pcab.wonghetto.wonghettocore.service;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -11,8 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Element;
 
 /**
  * 

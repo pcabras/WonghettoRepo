@@ -1,7 +1,8 @@
-package be.pcab.wonghetto.wonghettoserver.service;
+package be.pcab.wonghetto.wonghettocore.service;
 
 import static org.junit.Assert.*;
 
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,11 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.User;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Category;
+
 
 
 /**
- * Test class for {@link UserTXManager}.<br>
+ * 
+ * Test class for {@link CategoryTXManager}.<br>
  * As the service layer is meant here for dealing with transactional behavior,<br>
  * which is needed for performing CRUD, *TXManagers are the right classes to be tested<br>
  * instead of just DAOs.<br>
@@ -25,25 +28,22 @@ import be.pcab.wonghetto.wonghettoserver.persistence.domain.User;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath*:application-context-tests.xml")
-public class UserTXManagerTest {
-	
+public class CategoryTXManagerTest {
+
 	@Autowired
-	private UserTX userTX;
+	private CategoryTX categoryTXMAnager;
 
-	/**
-	 * 
-	 * The only method that need to be tested is {@link UserTXManager#getByUserName(String)}.
-	 * The reason is that all others methods are façades for hibernate API while 
-	 * {@link UserTXManager#getByUserName(String)} is a custom query.<br>
-	 * 
-	 */
 	@Test
-	public void testGetByUserName() throws Exception {
+	public void testGetCategoriesByUserName() throws Exception {
 		
-		User user = userTX.getByUserName("pcabras");
+		List<Category> categories = categoryTXMAnager.getByUserName("pcabras");
 		
-		assertNotNull(user);
+		int expected = 2;
+		
+		int actual = categories.size();
+		
+		assertEquals(expected, actual);
+		
 	}
-
 
 }

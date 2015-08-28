@@ -1,4 +1,4 @@
-package be.pcab.wonghetto.wonghettoserver.service;
+package be.pcab.wonghetto.wonghettocore.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.dao.CategoryDAO;
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
+import be.pcab.wonghetto.wonghettocore.persistence.dao.CategoryDAO;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Category;
 
 /**
  * A proper implementation of {@link CategoryTX}

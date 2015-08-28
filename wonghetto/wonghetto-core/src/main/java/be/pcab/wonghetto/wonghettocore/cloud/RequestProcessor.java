@@ -7,11 +7,11 @@ import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 
 import be.pcab.wonghetto.wonghettocore.WonghettoContext;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Category;
+import be.pcab.wonghetto.wonghettocore.service.CategoryTX;
 import be.pcab.wonghetto.wonghettoserver.exchangeprotocol.Processor;
 import be.pcab.wonghetto.wonghettoserver.exchangeprotocol.Request;
 import be.pcab.wonghetto.wonghettoserver.exchangeprotocol.RequestType;
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
-import be.pcab.wonghetto.wonghettoserver.service.CategoryTX;
 
 public class RequestProcessor implements Processor<Request> {
 

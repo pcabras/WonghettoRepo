@@ -1,4 +1,4 @@
-package be.pcab.wonghetto.wonghettoserver.persistence.dao;
+package be.pcab.wonghetto.wonghettocore.persistence.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Element;
 
 /**
  * 

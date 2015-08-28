@@ -1,8 +1,8 @@
-package be.pcab.wonghetto.wonghettoserver.service;
+package be.pcab.wonghetto.wonghettocore.service;
 
 import java.util.List;
 
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Element;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Element;
 
 /**
  * Stands for ElementTransaction:<br>

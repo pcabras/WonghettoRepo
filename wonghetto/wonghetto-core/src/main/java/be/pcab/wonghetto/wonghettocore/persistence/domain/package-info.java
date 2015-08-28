@@ -5,4 +5,4 @@
  * @author Paolo Cabras
  *
  */
-package be.pcab.wonghetto.wonghettoserver.persistence.domain;
+package be.pcab.wonghetto.wonghettocore.persistence.domain;

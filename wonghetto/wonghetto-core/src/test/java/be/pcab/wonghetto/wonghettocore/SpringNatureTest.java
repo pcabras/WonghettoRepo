@@ -5,11 +5,11 @@ import java.io.IOException;
 import org.apache.log4j.Logger;
 import org.glassfish.grizzly.servlet.WebappContext;
 
+import be.pcab.wonghetto.wonghettocore.persistence.dao.CategoryDAO;
+import be.pcab.wonghetto.wonghettocore.service.CategoryTX;
+import be.pcab.wonghetto.wonghettocore.service.CategoryTXManager;
 import be.pcab.wonghetto.wonghettoserver.WebContainer;
 import be.pcab.wonghetto.wonghettoserver.WonghettoServer;
-import be.pcab.wonghetto.wonghettoserver.persistence.dao.CategoryDAO;
-import be.pcab.wonghetto.wonghettoserver.service.CategoryTX;
-import be.pcab.wonghetto.wonghettoserver.service.CategoryTXManager;
 
 public class SpringNatureTest {
 

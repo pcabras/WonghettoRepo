@@ -4,4 +4,4 @@
  * @author Paolo Cabras
  *
  */
-package be.pcab.wonghetto.wonghettoserver.service;
+package be.pcab.wonghetto.wonghettocore.service;

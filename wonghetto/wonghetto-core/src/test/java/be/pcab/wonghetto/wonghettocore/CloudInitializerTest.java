@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import be.pcab.wonghetto.wonghettocore.cloud.AOPService;
-import be.pcab.wonghetto.wonghettoserver.persistence.domain.Category;
+import be.pcab.wonghetto.wonghettocore.persistence.domain.Category;
 
 public class CloudInitializerTest {
 
